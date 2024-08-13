@@ -1,0 +1,7 @@
+package com.example.apolloexampleclient
+
+interface Platform {
+    val name: String
+}
+
+expect fun getPlatform(): Platform
