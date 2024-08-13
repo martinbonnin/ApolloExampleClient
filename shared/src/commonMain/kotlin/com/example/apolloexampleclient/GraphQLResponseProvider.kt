@@ -1,6 +1,6 @@
 package com.example.apolloexampleclient
 
-import com.apollographql.apollo3.api.Operation
+import com.apollographql.apollo.api.Operation
 import com.example.apolloexampleclient.exception.MappingException
 import com.example.apolloexampleclient.exception.getMutationIsNull
 import com.example.apolloexampleclient.exception.getNotFoundData

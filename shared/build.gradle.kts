@@ -1,6 +1,20 @@
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
+    id("com.apollographql.apollo.external")
+}
+
+apollo {
+    service("default") {
+        srcDir("src/commonMain/graphql/default")
+        schemaFiles.from("src/commonMain/graphql/schema.graphqls")
+        packageName.set("default")
+    }
+    service("catch") {
+        srcDir("src/commonMain/graphql/catch")
+        schemaFiles.from("src/commonMain/graphql/schema.graphqls", "src/commonMain/graphql/catch/extra.graphqls")
+        packageName.set("catch")
+    }
 }
 
 kotlin {
@@ -25,12 +39,13 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation("com.apollographql.apollo3:apollo-runtime:3.7.4")
+                implementation("com.apollographql.apollo:apollo-runtime")
             }
         }
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test"))
+                implementation("com.apollographql.mockserver:apollo-mockserver:0.0.3")
             }
         }
         val androidMain by getting

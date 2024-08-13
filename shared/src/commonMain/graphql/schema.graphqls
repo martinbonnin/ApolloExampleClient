@@ -1,0 +1,26 @@
+type Query {
+    user: User
+}
+
+type User {
+    id: ID!
+    name: String!
+    content: [Content]
+}
+
+interface Content {
+    id: ID!
+}
+
+type Movie implements Content{
+    id: ID!
+    title: String!
+    duration: Float
+}
+
+type Picture implements Content {
+    id: ID!
+    url: String!
+    width: Int
+    height: Int
+}

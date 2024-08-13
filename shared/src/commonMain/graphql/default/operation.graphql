@@ -1,0 +1,15 @@
+query DefaultQuery {
+    user {
+        id
+        name
+        content {
+            id
+            ...movieFragment
+        }
+    }
+}
+
+fragment movieFragment on Movie {
+    title
+    duration
+}

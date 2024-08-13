@@ -1,9 +1,9 @@
 package com.example.apolloexampleclient.impl
 
-import com.apollographql.apollo3.api.Error
-import com.apollographql.apollo3.api.Mutation
-import com.apollographql.apollo3.api.Operation
-import com.apollographql.apollo3.api.Query
+import com.apollographql.apollo.api.Error
+import com.apollographql.apollo.api.Mutation
+import com.apollographql.apollo.api.Operation
+import com.apollographql.apollo.api.Query
 import com.example.apolloexampleclient.GraphQLError
 import com.example.apolloexampleclient.GraphQLOperationType
 import com.example.apolloexampleclient.GraphQLValuePath

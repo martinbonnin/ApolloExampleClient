@@ -1,8 +1,8 @@
 package com.example.apolloexampleclient.impl
 
-import com.apollographql.apollo3.ApolloClient
-import com.apollographql.apollo3.api.ApolloRequest
-import com.apollographql.apollo3.api.Operation
+import com.apollographql.apollo.ApolloClient
+import com.apollographql.apollo.api.ApolloRequest
+import com.apollographql.apollo.api.Operation
 import com.example.apolloexampleclient.EmptyGraphQLErrorToExceptionResolver
 import com.example.apolloexampleclient.GraphQLErrorToExceptionResolver
 import com.example.apolloexampleclient.GraphQLRequestMeta

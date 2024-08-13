@@ -1,0 +1,16 @@
+
+query CatchQuery {
+    user {
+        id
+        name
+        content {
+            id
+            ...movieFragment
+        }
+    }
+}
+
+fragment movieFragment on Movie {
+    title
+    duration @catch(to: RESULT)
+}
